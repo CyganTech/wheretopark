@@ -33,7 +33,7 @@ func RunPrefetch(cache *Cache, source Source, interval time.Duration) {
 		if err != nil {
 			log.Ctx(ctx).Error().Err(err).Msg("prefetch failed")
 		} else {
-			log.Ctx(ctx).Debug().Uint("parking-lots", count).Msg("prefetch succeesfull")
+                        log.Ctx(ctx).Debug().Uint("parking-lots", count).Msg("prefetch successful")
 		}
 		time.Sleep(interval)
 	}
