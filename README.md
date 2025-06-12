@@ -14,7 +14,7 @@ Try it out at [web.wheretopark.app](https://web.wheretopark.app).
 
 ### iOS & Android
 
-iOS was initially developed with Swift and SwiftUI, right now it works similarly as Android - the web app is compiled with [capacitor.js](https://capacitorjs.com) to work on mobile.
+iOS was initially developed with Swift and SwiftUI, right now it works similarly as Android - the web app is compiled with [Capacitor](https://capacitorjs.com) to work on mobile.
 
 
 iOS app can be installed from [App Store](https://apps.apple.com/us/app/where-to-park/id6444453582).
