@@ -51,7 +51,7 @@ func (s *Server) handleParkingLots(w http.ResponseWriter, r *http.Request) {
 	}
 
 	parkingLots := s.cache.GetAllParkingLots()
-	if parkingLots != nil {
+	if len(parkingLots) > 0 {
 		send(parkingLots)
 		return
 	}
