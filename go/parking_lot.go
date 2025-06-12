@@ -215,7 +215,7 @@ func (p *ParkingLot) Validate() error {
 }
 
 func (m *Metadata) Validate() error {
-	if m.LastUpdated != nil && m.LastUpdated.Unix() == 0 {
+	if m.LastUpdated != nil && m.LastUpdated.IsZero() {
 		return fmt.Errorf("lastUpdated must not be set to zero")
 	}
 	if m.Name == "" {
@@ -225,7 +225,7 @@ func (m *Metadata) Validate() error {
 		return fmt.Errorf("address must not be empty")
 	}
 	defaultGeometry := geojson.Geometry{}
-	if m.Geometry == nil || m.Geometry == &defaultGeometry {
+	if m.Geometry == nil || *m.Geometry == defaultGeometry {
 		return fmt.Errorf("geometry must not be empty")
 	}
 	if m.TotalSpots == nil {
